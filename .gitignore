@@ -1,0 +1,25 @@
+hold/UEFI_Spec_2_9_2021_03_18.pdf
+vb/Name OS Later/drive.hdd
+vb/Name OS Later/drive.hdd.osfdelta.index
+vb/Name OS Later/drive.hdd.osfdelta.raw
+vb/Name OS Later/Name OS Later-1.15-windows.vbox
+vb/Name OS Later/Name OS Later.nvram
+vb/Name OS Later/Name OS Later.vbox
+vb/Name OS Later/Name OS Later.vbox-prev
+vb/Name OS Later/Logs/VBox.log
+vb/Name OS Later/Logs/VBox.log.1
+vb/Name OS Later/Logs/VBox.log.2
+vb/Name OS Later/Logs/VBox.log.3
+vb/Name OS Later/Logs/VBoxHardening.log
+VM/Other 64-bit-s001.vmdk
+VM/Other 64-bit-s002.vmdk
+VM/Other 64-bit-s003.vmdk
+VM/Other 64-bit.nvram
+VM/Other 64-bit.vmdk
+VM/Other 64-bit.vmsd
+VM/Other 64-bit.vmx
+VM/Other 64-bit.vmxf
+VM/vmware-0.log
+VM/vmware.log
+.vscode/settings.json
+SomeBootloader/Makefile
