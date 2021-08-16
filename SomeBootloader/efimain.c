@@ -262,6 +262,16 @@ EFI_STATUS efi_main(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
     Print(L" KBytes");
 
     SetColor(EFI_GREEN);
+    Print(L"Hit Any Key to write to a file\r\n");
+
+    HitAnyKey();
+
+    ClearScreen();
+	
+    // Writing to a file
+    WriteToFile("This is our file.\nYEAH !!!", u"test.txt");
+
+    SetColor(EFI_GREEN);
     Print(L"\nHit Any Key to see ThatOSDev's custom Font.");
     ResetKeyboard();
     HitAnyKey();
