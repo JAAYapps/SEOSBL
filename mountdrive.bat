@@ -1,14 +1,12 @@
-OSFMount -a -t file -f "vb\Name OS Later\drive.hdd" -s 40M -o rw -m Z:
-
-mkdir "Z:\EFI\Boot\"
+OSFMount -a -t file -f drive\drive.hdd -s 40M -o rw -m Z:
 
 move /y BOOTX64.EFI "Z:\EFI\Boot\"
 copy /y mytextfile.txt "Z:\"
 move /y loader.bin "Z:\"
 
-timeout 5
+timeout 3
 
-OSFMount -d -m Z:
+OSFMount -D -m Z:
 
 pause
 
