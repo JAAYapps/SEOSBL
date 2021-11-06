@@ -13,8 +13,8 @@ I will have to see where I will end up.
 
 <h2>What is working and not working</h2>
 <ul>
-  <li>* So far the graphics and printf functions are working.</li>
-  <li>* printf and wprintf does not have any code for the format tags yet.</li>
+  <li>So far the graphics and printf functions are working.</li>
+  <li>printf and wprintf does not have any code for the format tags yet.</li>
 </ul>
   
 <h2>Anything else</h2>
