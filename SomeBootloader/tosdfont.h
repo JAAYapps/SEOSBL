@@ -4,7 +4,7 @@
 // 8x16    = 128
 // 128x128 = 16384
 // 128x256 = 32768
-unsigned char asciifont[32768] = {
+unsigned char asciifont[32768] __attribute__ ((section (".text"))) = {
 
 0,0,0,0,0,0,0,0, // 000  --  NULL 
 1,0,0,1,0,0,0,0,

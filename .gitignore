@@ -23,3 +23,10 @@ VM/vmware-0.log
 VM/vmware.log
 .vscode/settings.json
 SomeBootloader/Makefile
+hold/ACPI_Spec_6_4_Jan22.pdf
+OSToNameLater.code-workspace
+drive/drive.hdd
+compileArmEFI.bat
+eggcarrier.png
+loader.bin
+loader2.bin

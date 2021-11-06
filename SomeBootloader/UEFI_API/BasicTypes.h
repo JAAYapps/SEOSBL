@@ -1,23 +1,22 @@
 #pragma once
 
+#include "..\common.h"
+
 //This is the unsigned type definitions
 // NOTE : CHAR16 is supposed to be Minimum of 16-Bit.
 //        But on some machines it will be 32-Bit.
-//        ThatOSDev included both typedefs as a means of reference.
+//        Both typedefs are here as a means of reference.
 // UEFI 2.9 Specs PDF Page 20
 typedef unsigned short int  uint16_t;
 typedef unsigned short int  uint_least16_t;
 typedef uint_least16_t      CHAR16;
 
-typedef unsigned char       UINT8;
-typedef unsigned short      UINT16;
-typedef unsigned int        UINT32;
-typedef unsigned long long  UINT64;
-
 // UINTN can be used for both 64-Bit ( 8 Bytes ) and 32-Bit ( 4 Bytes ).
-// We set this for 64-Bit since this tutorial series is 64-Bit only.
+// Set this for 64-Bit since the goal is to not use 32-bit.
 // UEFI 2.9 Specs PDF Page 20
 typedef unsigned long long  UINTN;
+
+typedef long long INTN;
 
 typedef unsigned char       BOOLEAN;
 

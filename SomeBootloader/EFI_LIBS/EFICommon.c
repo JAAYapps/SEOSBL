@@ -4,7 +4,7 @@ EFI_HANDLE gIH;
 EFI_SYSTEM_TABLE *gST;
 void InitUEFIServices(EFI_HANDLE IH, EFI_SYSTEM_TABLE *ST)
 {
-    // We setup this global variable in the efilibs.h file.
+    // Setup these as global variables in the EFICommon.h file.
     gIH = IH;
     gST = ST;
 }
@@ -29,31 +29,20 @@ EFI_HANDLE GetImageHandle()
     return gIH;
 }
 
-unsigned long long strlen(const char* str)
+// From the GNU-EFI
+INTN RtCompareGuid(EFI_GUID* Guid1, EFI_GUID* Guid2)
 {
-	const char* strCount = str;
-
-	while (*strCount++);
-	return strCount - str - 1;
+    INT32 *g1, *g2, r;
+    g1 = (INT32 *) Guid1;
+    g2 = (INT32 *) Guid2;
+    r  = g1[0] - g2[0];
+    r |= g1[1] - g2[1];
+    r |= g1[2] - g2[2];
+    r |= g1[3] - g2[3];
+    return r;
 }
 
-void itoa(unsigned long int n, unsigned short int* buffer, int basenumber)
+INTN CompareGuid(EFI_GUID* Guid1, EFI_GUID* Guid2)
 {
-	unsigned long int hold;
-	int i, j;
-	hold = n;
-	i = 0;
-	
-	do{
-		hold = n % basenumber;
-		buffer[i++] = (hold < 10) ? (hold + '0') : (hold + 'a' - 10);
-	} while(n /= basenumber);
-	buffer[i--] = 0;
-	
-	for(j = 0; j < i; j++, i--)
-	{
-		hold = buffer[j];
-		buffer[j] = buffer[i];
-		buffer[i] = hold;
-	}
+    return RtCompareGuid (Guid1, Guid2);
 }

@@ -39,7 +39,7 @@ typedef struct EFI_SYSTEM_TABLE
     EFI_RUNTIME_SERVICES            *RuntimeServices; 
     EFI_BOOT_SERVICES               *BootServices; 
     UINTN                           NumberOfTableEntries; 
-    //EFI_CONFIGURATION_TABLE         *ConfigurationTable;
+    EFI_CONFIGURATION_TABLE         *ConfigurationTable;
 } EFI_SYSTEM_TABLE;
 
 // UEFI 2.9 Specs PDF Page 288

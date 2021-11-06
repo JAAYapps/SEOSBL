@@ -4,6 +4,7 @@
 #include "..\UEFI_API\EFIDevices.h"
 
 EFI_SIMPLE_FILE_SYSTEM_PROTOCOL *Volume;
+EFI_FILE_PROTOCOL *RootFS;
 void InitializeFILESYSTEM()
 {
     EFI_STATUS Status;
@@ -27,20 +28,19 @@ void InitializeFILESYSTEM()
     Status = GetSystemTable()->BootServices->HandleProtocol(LoadedImage->DeviceHandle, &EFI_SIMPLE_FILE_SYSTEM_PROTOCOL_GUID, (void**)&Volume);
     SetColor(EFI_CYAN);
     Print(CheckStandardEFIError(Status));
+
+    SetColor(EFI_BROWN);
+    Print(L"RootFS ... ");
+    Status = Volume->OpenVolume(Volume, &RootFS);
+    SetColor(EFI_CYAN);
+    Print(CheckStandardEFIError(Status));
 }
 
-EFI_FILE_PROTOCOL* openFile(CHAR16* FileName)
+EFI_FILE_PROTOCOL* getFileHandle(CHAR16* FileName)
 {
     // This opens a file from the EFI FAT32 file system volume.
     // It loads from root, so you must supply full path if the file is not in the root.
     // Example : "somefolder//myfile"  <--- Notice the double forward slash.
-    EFI_STATUS Status;
-    SetColor(EFI_BROWN);
-    Print(L"RootFS ... ");
-    EFI_FILE_PROTOCOL* RootFS;
-    Status = Volume->OpenVolume(Volume, &RootFS);
-    SetColor(EFI_CYAN);
-    Print(CheckStandardEFIError(Status));
     
     SetColor(EFI_BROWN);
     Print(L"Opening File ... ");
