@@ -1,7 +1,7 @@
 # UEFI-OS-Loader-to-Name-Later
 
 <h2>Where the project is so far</h2> 
-I think the name will eventually by SEOSBL (Simple Expandable Operating System Boot Loader)
+I think the name will eventually be SEOSBL (Simple Expandable Operating System Boot Loader)
 
 Right now if you run the bat files with gcc and OSFmount installed on windows, the image file will be opened
 and the compiled efi and bin files will be copied into the image. At some point I want to use a config file with SEOSBL.
