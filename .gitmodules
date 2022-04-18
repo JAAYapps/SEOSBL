@@ -1,0 +1,6 @@
+[submodule "Common-Code-For-C-Projects"]
+	path = Common-Code-For-C-Projects
+	url = git@github.com:JAAYapps/Common-Code-For-C-Projects.git
+[submodule "SimpleJSONtoC"]
+	path = SimpleJSONtoC
+	url = git@github.com:JAAYapps/SimpleJSONtoC.git
