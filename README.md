@@ -7,7 +7,7 @@ Right now if you run the bat file with gcc and OSFmount installed on windows, a 
 
 I will create some instructions for setting up a boot environment in the future. I still need to structure the layout of the evnironment first.
 
-In concept, the loader should be able to grab a boot driver load it into memory and call it's main function. The loader.bin is not programmed to do that yet and I still need a way to make a working keyboard driver from any usb keyboard. I don't want to make a legacy PS2 keyboard driver.
+In concept, the loader should be able to grab a "boot driver", load it into memory, and call it's main function. The loader.bin is not programmed to do that yet and I still need a way to make a working keyboard driver from any usb keyboard. I don't want to make a legacy PS2 keyboard driver.
 
 I still need to code some other things like getting ACPI info for devices on the computer. 
 
